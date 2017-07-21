@@ -24,6 +24,8 @@ bld/
 [Ii]nclude/
 [Ll]ib/
 *.tlog/
+[Bb]uild/
+.vscode/
 
 # Visual Studio 2015 cache/options directory
 .vs/
