@@ -1,0 +1,12 @@
+machine:
+  timezone: Asia/Tokyo
+dependencies:
+  pre:
+    - mkdir build; cd build; cmake ..; make
+test:
+  pre:
+    - echo "[start test]"
+  override:
+    - cd build; make run_test
+  post:
+    - echo "[end test]"
