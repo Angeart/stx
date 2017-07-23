@@ -1,8 +1,12 @@
 machine:
   timezone: Asia/Tokyo
+checkout:
+  post:
+    - git submodule init
+    - git submodule update
 dependencies:
   pre:
-    - cd third_party/googletest; git checkout master; cd ../../; mkdir build; cd build; cmake ..; make
+    - mkdir build; cd build; cmake ..; make
 test:
   pre:
     - echo "[start test]"
